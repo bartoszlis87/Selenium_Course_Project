@@ -17,4 +17,4 @@ Feature: Task02
     And get total order
     And go to history and details
     And check status Awaiting check payment and total order
-    And browser closed now
+    And closing browser now

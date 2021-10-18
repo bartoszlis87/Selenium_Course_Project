@@ -45,8 +45,8 @@ public class ShoppingCartSteps {
     @Given("user open seccond coderslab website https://mystore-testlab.coderslab.pl")
     public void openWebsiteShoppingCard() {
         WebDriverManager.chromedriver().setup();
-
         driver = new ChromeDriver();
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
@@ -145,7 +145,6 @@ public class ShoppingCartSteps {
     @And("go to history and details")
     public void goToOrderHistoryAndDetalis() {
         orderConfirmationPage.clickAccountButton();
-
         accountPageShoppingCard = new YourAccountPage(driver);
         accountPageShoppingCard.clickOrderHistoryAndDetalisButton();
     }
@@ -158,8 +157,8 @@ public class ShoppingCartSteps {
     }
 
     @AfterEach
-    @And("browser closed now")
-    public void closeBrowser() {
+    @And("closing browser now")
+    public void closeWindows() {
         driver.quit();
     }
 }
