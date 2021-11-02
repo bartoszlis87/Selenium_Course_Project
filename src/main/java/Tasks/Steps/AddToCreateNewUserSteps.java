@@ -5,10 +5,10 @@ import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import Tasks.PageObjects.AddToNewUser;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,15 +17,16 @@ public class AddToCreateNewUserSteps {
     private WebDriver driver;
 
 
+
     @BeforeEach
     public void openToSignInWebsite() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         driver.manage().window().maximize();
+
         driver.navigate().to("https://mystore-testlab.coderslab.pl");
-        driver.findElement(By.cssSelector("#_desktop_user_info")).click();
 
     }
 
