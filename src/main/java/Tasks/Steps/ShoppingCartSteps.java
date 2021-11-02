@@ -132,7 +132,7 @@ public class ShoppingCartSteps {
     @Then("confirm screenshot order")
     public void printScreen() throws IOException {
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("C:\\Selenium\\CodersLab\\screenshot.png"));
+        FileUtils.copyFile(scrFile, new File("screenshot.png"));
     }
 
     @And("get total order")
